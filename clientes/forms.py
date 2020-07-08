@@ -46,13 +46,19 @@ class EnderecoForm(forms.ModelForm):
         )
     )
     bairro = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     cidade = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     estado = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
 
 
