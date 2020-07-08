@@ -19,6 +19,7 @@
             <table class="table">
           <thead class="thead-dark">
             <tr>
+                <th scope="col">#</th>
                 <th scope="col">Cpf</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Sobrenome</th>
@@ -30,6 +31,7 @@
           <tbody>
             {% for cliente in clientes %}
             <tr>
+                <td><img src="/{{ cliente.foto }}" height="50px"></td>
                 <td>{{ cliente.cpf }}</td>
                 <td>{{ cliente.nome }}</td>
                 <td>{{ cliente.sobrenome }}</td>

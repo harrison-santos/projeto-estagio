@@ -5,10 +5,14 @@ from .models import Cliente, Endereco
 
 class ClienteForm(forms.ModelForm):
     cpf = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     nome = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     sobrenome = forms.CharField(
         widget=forms.TextInput()
@@ -31,7 +35,9 @@ class ClienteForm(forms.ModelForm):
 
 class EnderecoForm(forms.ModelForm):
     logradouro = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     bairro = forms.CharField(
         widget=forms.TextInput()
