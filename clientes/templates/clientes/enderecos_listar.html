@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+
+{% block main %}
+<div class="container">
+    <div class="text-center">
+        <h3>Listagem de Enderecos</h3>
+    </div>
+
+    <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'enderecosCadastrar' cliente_id %}" class="btn btn-info"> INCLUIR ENDERECO </a>
+            </div>
+    </div>
+
+    <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for endereco in enderecos %}
+            <tr>
+                <td>{{ endereco }}</td>
+                <td>
+                    <a href="{% url 'enderecosEditar' cliente_id=cliente_id endereco_id=endereco.id %}"><i class="fa fa-pencil-square-o"></i></a>
+                    <a href="{% url 'enderecosDeletar' cliente_id=cliente_id  endereco_id=endereco.id %}"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+          {% endfor %}
+
+          </tbody>
+         </table>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

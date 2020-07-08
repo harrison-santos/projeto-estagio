@@ -1,0 +1,12 @@
+body{
+
+}
+
+.content-wrap {
+    padding-top: 30px;
+    width: 640px;
+    margin: auto;
+    border: 1px solid red;
+    font-size: 14px;
+}
+
