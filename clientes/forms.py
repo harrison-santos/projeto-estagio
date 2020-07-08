@@ -15,13 +15,19 @@ class ClienteForm(forms.ModelForm):
         )
     )
     sobrenome = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     telefone = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
     email = forms.CharField(
-        widget=forms.TextInput()
+        widget=forms.TextInput(
+            attrs={'class': 'form-control'}
+        )
     )
 
     def __str__(self):
